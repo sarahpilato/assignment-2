@@ -1,0 +1,43 @@
+nav {
+    @include navFont;
+
+    .hamburger {
+        font-size: 2rem;
+        visibility: hidden;
+
+        @include navMQ {
+            visibility: visible;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+
+        @include navMQ {
+            visibility: hidden;
+        }
+    
+    }
+
+    .hamUL {
+        @include navMQ {
+            visibility: visible;
+        }
+    }
+    
+    li {
+        margin: 20px;
+    }
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $black;
+        &:hover {
+            border-bottom: solid 2.5px $brightYellow;
+            padding-bottom: 5px;
+        }
+    }
+}
+
